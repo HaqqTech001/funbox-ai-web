@@ -1,0 +1,27 @@
+{
+  "name": "funbox-ai-backend",
+  "version": "1.0.0",
+  "description": "Backend API for FunBox AI content generation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "ai",
+    "content-generation",
+    "express",
+    "gemini"
+  ],
+  "author": "FunBox AI",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "express-rate-limit": "^7.1.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

@@ -1,0 +1,80 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------- */
+/*       BASE LAYER       */
+/* ---------------------- */
+@layer base {
+  body {
+    @apply font-body transition-colors duration-300 
+           bg-page-dark text-text-primary-dark;
+  }
+
+  body.light {
+    @apply bg-page-light text-text-primary-light;
+  }
+}
+
+/* ---------------------- */
+/*     COMPONENTS         */
+/* ---------------------- */
+@layer components {
+  /* Primary button */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-accent text-white font-semibold 
+           py-3 px-6 rounded-xl shadow-glow 
+           hover:shadow-button-hover hover:scale-105 
+           transition-all duration-200;
+  }
+
+  /* Secondary (adaptive) */
+  .btn-secondary {
+    @apply font-semibold py-3 px-6 rounded-xl transition-all duration-200 
+           bg-surface-light border border-border-light text-text-primary-light
+           hover:border-primary
+           dark:bg-surface-dark dark:border-border-dark dark:text-text-primary-dark;
+  }
+
+  /* Card (auto dark/light compatible) */
+  .card {
+    @apply rounded-2xl p-8 shadow-card 
+           bg-surface-light border border-border-light 
+           dark:bg-surface-dark dark:border-border-dark dark:shadow-glow;
+  }
+
+  /* Input (unified) */
+  .input {
+    @apply rounded-lg px-4 py-3 transition-all duration-200
+           bg-surface-light border border-border-light text-text-primary-light
+           focus:border-primary focus:ring-2 focus:ring-primary/20 
+           focus:outline-none
+           dark:bg-surface-dark dark:border-border-dark dark:text-text-primary-dark;
+  }
+}
+
+/* ---------------------- */
+/*       UTILITIES         */
+/* ---------------------- */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-accent to-highlight bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-accent;
+  }
+
+  .bg-gradient-highlight {
+    @apply bg-gradient-to-r from-highlight to-primary;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}

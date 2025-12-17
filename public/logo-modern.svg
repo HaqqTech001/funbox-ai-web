@@ -1,0 +1,60 @@
+<svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="modernGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="modernGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f5576c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4facfe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background card -->
+  <rect x="10" y="10" width="220" height="60" rx="15" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  
+  <!-- FunBox part -->
+  <g transform="translate(20, 25)">
+    <!-- Box container -->
+    <rect x="0" y="0" width="35" height="25" rx="6" fill="url(#modernGradient)" filter="url(#shadow)"/>
+    <!-- Fun text -->
+    <text x="17.5" y="12" text-anchor="middle" fill="white" font-family="'Inter', sans-serif" font-size="8" font-weight="600">Fun</text>
+    <text x="17.5" y="20" text-anchor="middle" fill="white" font-family="'Inter', sans-serif" font-size="6" font-weight="600">Box</text>
+    <!-- Fun elements -->
+    <circle cx="8" cy="5" r="2" fill="#FFEAA7" opacity="0.8"/>
+    <circle cx="27" cy="5" r="2" fill="#74B9FF" opacity="0.8"/>
+    <circle cx="17.5" cy="20" r="1.5" fill="#FD79A8" opacity="0.8"/>
+  </g>
+  
+  <!-- Arrow connection -->
+  <g transform="translate(70, 35)">
+    <path d="M0,5 L15,5 L15,0 L25,10 L15,20 L15,15 L0,15 Z" fill="url(#modernGradient)" opacity="0.8"/>
+  </g>
+  
+  <!-- AI part -->
+  <g transform="translate(110, 25)">
+    <!-- AI container -->
+    <rect x="0" y="0" width="35" height="25" rx="6" fill="url(#modernGradient2)" filter="url(#shadow)"/>
+    <!-- AI text -->
+    <text x="17.5" y="12" text-anchor="middle" fill="white" font-family="'Inter', sans-serif" font-size="8" font-weight="600">AI</text>
+    <text x="17.5" y="20" text-anchor="middle" fill="white" font-family="'Inter', sans-serif" font-size="6" font-weight="400">Smart</text>
+    <!-- AI elements -->
+    <circle cx="8" cy="5" r="1.5" fill="#00B894" opacity="0.8"/>
+    <circle cx="27" cy="5" r="1.5" fill="#E17055" opacity="0.8"/>
+    <circle cx="17.5" cy="18" r="2" fill="#FDCB6E" opacity="0.8"/>
+  </g>
+  
+  <!-- Main brand text -->
+  <text x="180" y="35" text-anchor="middle" fill="url(#modernGradient)" font-family="'Inter', sans-serif" font-size="14" font-weight="700">FunBox</text>
+  <text x="180" y="55" text-anchor="middle" fill="url(#modernGradient2)" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Ai</text>
+  
+  <!-- Accent dots -->
+  <circle cx="30" cy="15" r="2" fill="#FFEAA7" opacity="0.6"/>
+  <circle cx="210" cy="65" r="2" fill="#74B9FF" opacity="0.6"/>
+  <circle cx="190" cy="15" r="1.5" fill="#FD79A8" opacity="0.6"/>
+</svg>
