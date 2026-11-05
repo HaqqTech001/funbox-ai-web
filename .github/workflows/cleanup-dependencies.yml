@@ -1,0 +1,33 @@
+
+name: Remove committed node_modules
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Remove committed dependencies
+        run: |
+          git rm -r --cached --ignore-unmatch node_modules
+
+      - name: Commit cleanup
+        run: |
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Remove committed node_modules"
+            git push origin main
+          else
+            echo "No tracked node_modules found."
+          fi
